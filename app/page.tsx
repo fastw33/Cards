@@ -17,6 +17,7 @@ import {
   UsersRound
 } from "lucide-react";
 import { PhoneShowcase } from "@/components/PhoneShowcase";
+import { ProductCardShowcase } from "@/components/ProductCardShowcase";
 import { site } from "@/data/site";
 
 const productIcons = [Contact, UsersRound, LayoutPanelTop];
@@ -101,7 +102,10 @@ export default function Home() {
             </div>
           </div>
 
-          <PhoneShowcase />
+          <div className="hero-visuals">
+            <PhoneShowcase />
+            <ProductCardShowcase />
+          </div>
         </div>
 
         <div className="metric-strip">

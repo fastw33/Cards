@@ -317,6 +317,18 @@ h1 {
   flex: 0 0 auto;
 }
 
+.hero-visuals {
+  position: relative;
+  display: grid;
+  min-height: var(--phone-scene-height);
+  place-items: center;
+}
+
+.hero-visuals .phone-scene {
+  grid-area: 1 / 1;
+  width: 100%;
+}
+
 .phone-scene {
   position: relative;
   display: grid;
@@ -601,6 +613,200 @@ h1 {
   font-size: 0.44rem;
   font-weight: 900;
   text-transform: uppercase;
+}
+
+.product-card-scene {
+  position: absolute;
+  z-index: 8;
+  bottom: clamp(10px, 2vw, 26px);
+  left: clamp(4px, 4vw, 34px);
+  width: min(52%, 310px);
+  min-width: 190px;
+  pointer-events: none;
+  perspective: 1100px;
+}
+
+.product-card-stack {
+  position: relative;
+  min-height: 260px;
+  transform-style: preserve-3d;
+}
+
+.qr-product-card {
+  position: absolute;
+  display: grid;
+  width: 172px;
+  min-height: 218px;
+  overflow: hidden;
+  border-radius: 18px;
+  box-shadow:
+    0 24px 50px rgba(6, 28, 34, 0.2),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.7);
+  transform-style: preserve-3d;
+}
+
+.qr-product-card::before {
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: linear-gradient(105deg, rgba(255, 255, 255, 0.56), transparent 32%);
+  content: "";
+  pointer-events: none;
+}
+
+.qr-product-card::after {
+  position: absolute;
+  inset: 10px -6px auto auto;
+  width: 14px;
+  height: 64%;
+  border-radius: 0 18px 18px 0;
+  background: color-mix(in srgb, var(--color-dark), white 14%);
+  content: "";
+  opacity: 0.18;
+  transform: translateZ(-10px);
+}
+
+.qr-product-card-front {
+  top: 14px;
+  left: 0;
+  justify-items: center;
+  align-content: center;
+  gap: 10px;
+  background:
+    radial-gradient(circle at 50% 24%, rgba(184, 223, 85, 0.18), transparent 32%),
+    linear-gradient(180deg, #ffffff, #f6fbf9);
+  color: var(--color-dark);
+  padding: 26px 18px 38px;
+  animation: productCardFloat 6s ease-in-out infinite;
+  transform: rotateZ(-8deg) rotateY(-18deg) rotateX(8deg);
+}
+
+.qr-product-card-back {
+  top: 30px;
+  right: -12px;
+  align-content: start;
+  gap: 8px;
+  background:
+    radial-gradient(circle at 82% 8%, rgba(184, 223, 85, 0.26), transparent 24%),
+    linear-gradient(145deg, #13865f, #0d6e58);
+  color: white;
+  padding: 22px 18px 18px;
+  animation: productCardFloatBack 6.4s ease-in-out infinite;
+  transform: rotateZ(8deg) rotateY(18deg) rotateX(8deg) translateZ(18px);
+}
+
+.card-logo-mark {
+  display: grid;
+  width: 58px;
+  height: 58px;
+  place-items: center;
+  border-radius: 18px;
+  background: linear-gradient(135deg, var(--color-primary), var(--color-accent));
+  color: white;
+  box-shadow: 0 16px 28px rgba(12, 124, 143, 0.22);
+}
+
+.brand-card-lockup {
+  display: grid;
+  justify-items: center;
+  gap: 1px;
+  text-align: center;
+}
+
+.brand-card-lockup span,
+.card-contact-title,
+.qr-product-card-back small {
+  font-size: 0.58rem;
+  font-weight: 900;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+.brand-card-lockup strong {
+  font-family: var(--font-display), Arial, sans-serif;
+  font-size: 1.45rem;
+  line-height: 0.96;
+}
+
+.card-social-row {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  gap: 8px;
+  color: var(--color-primary);
+  font-size: 0.47rem;
+  font-weight: 900;
+}
+
+.card-mountain-strip {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 44px;
+  background:
+    linear-gradient(135deg, transparent 16px, #168565 17px 42px, transparent 43px),
+    linear-gradient(45deg, transparent 12px, #0f745d 13px 36px, transparent 37px);
+  background-size: 46px 44px, 58px 44px;
+  opacity: 0.95;
+}
+
+.card-contact-title {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  opacity: 0.9;
+}
+
+.qr-product-card-back > strong {
+  font-family: var(--font-display), Arial, sans-serif;
+  font-size: 0.82rem;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.qr-card-code {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(15, 1fr);
+  gap: 2px;
+  width: 130px;
+  aspect-ratio: 1;
+  justify-self: center;
+  border: 7px solid white;
+  background: white;
+  box-shadow: 0 16px 28px rgba(6, 28, 34, 0.18);
+}
+
+.qr-card-code span {
+  background: transparent;
+}
+
+.qr-card-code span.is-active {
+  background: #071215;
+}
+
+.qr-center-brand {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: grid;
+  width: 42px;
+  height: 42px;
+  place-items: center;
+  border: 4px solid white;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--color-primary), var(--color-accent));
+  color: white;
+  transform: translate(-50%, -50%);
+}
+
+.qr-product-card-back small {
+  justify-self: center;
+  opacity: 0.82;
+  text-align: center;
 }
 
 .metric-strip {
@@ -1069,6 +1275,28 @@ h1 {
   }
 }
 
+@keyframes productCardFloat {
+  0%,
+  100% {
+    transform: rotateZ(-8deg) rotateY(-18deg) rotateX(8deg) translateY(0);
+  }
+
+  50% {
+    transform: rotateZ(-5deg) rotateY(-14deg) rotateX(7deg) translateY(-10px);
+  }
+}
+
+@keyframes productCardFloatBack {
+  0%,
+  100% {
+    transform: rotateZ(8deg) rotateY(18deg) rotateX(8deg) translateZ(18px) translateY(0);
+  }
+
+  50% {
+    transform: rotateZ(5deg) rotateY(14deg) rotateX(7deg) translateZ(24px) translateY(-8px);
+  }
+}
+
 @keyframes drift {
   0%,
   100% {
@@ -1139,6 +1367,19 @@ h1 {
     min-height: auto;
   }
 
+  .hero-visuals {
+    min-height: var(--phone-scene-height);
+  }
+
+  .product-card-scene {
+    left: 0;
+    bottom: 6px;
+    width: 260px;
+    min-width: 0;
+    transform: scale(0.86);
+    transform-origin: left bottom;
+  }
+
   .directory-benefits {
     grid-template-columns: 1fr;
     max-width: 720px;
@@ -1180,6 +1421,26 @@ h1 {
 
   .floating-phone {
     width: min(76%, var(--phone-width));
+  }
+
+  .product-card-scene {
+    bottom: -2px;
+    left: -8px;
+    width: 218px;
+    transform: scale(0.64);
+  }
+
+  .product-card-stack {
+    min-height: 230px;
+  }
+
+  .qr-product-card {
+    width: 160px;
+    min-height: 202px;
+  }
+
+  .qr-card-code {
+    width: 118px;
   }
 
   .directory-mockup {
