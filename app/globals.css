@@ -653,6 +653,10 @@ h1 {
   transform: translateZ(-10px);
 }
 
+.qr-product-card-front::after {
+  opacity: 0;
+}
+
 .qr-product-card-front {
   top: 14px;
   left: 0;
