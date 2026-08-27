@@ -120,6 +120,7 @@ h3,
 }
 
 .hero-section,
+.card-showcase-section,
 .products-section,
 .directory-section,
 .process-section,
@@ -315,18 +316,6 @@ h1 {
 .plans-grid li svg {
   color: var(--color-primary);
   flex: 0 0 auto;
-}
-
-.hero-visuals {
-  position: relative;
-  display: grid;
-  min-height: var(--phone-scene-height);
-  place-items: center;
-}
-
-.hero-visuals .phone-scene {
-  grid-area: 1 / 1;
-  width: 100%;
 }
 
 .phone-scene {
@@ -616,11 +605,9 @@ h1 {
 }
 
 .product-card-scene {
-  position: absolute;
+  position: relative;
   z-index: 8;
-  bottom: clamp(10px, 2vw, 26px);
-  left: clamp(4px, 4vw, 34px);
-  width: min(52%, 310px);
+  width: min(100%, 310px);
   min-width: 190px;
   pointer-events: none;
   perspective: 1100px;
@@ -839,6 +826,80 @@ h1 {
 
 .metric span {
   color: var(--color-muted);
+}
+
+.card-showcase-section {
+  display: grid;
+  grid-template-columns: minmax(0, 0.82fr) minmax(320px, 1fr);
+  gap: clamp(36px, 7vw, 90px);
+  align-items: center;
+  padding: clamp(64px, 8vw, 108px) 0 0;
+}
+
+.card-showcase-copy {
+  max-width: 610px;
+}
+
+.card-showcase-copy h2 {
+  max-width: 560px;
+  margin-bottom: 16px;
+  font-size: clamp(1.95rem, 3.2vw, 3.4rem);
+  line-height: 1.02;
+}
+
+.card-showcase-copy > p:not(.eyebrow) {
+  color: var(--color-muted);
+  font-size: clamp(1rem, 1.4vw, 1.16rem);
+  line-height: 1.75;
+}
+
+.card-feature-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 24px;
+}
+
+.card-feature-list span {
+  display: inline-flex;
+  min-height: 42px;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid var(--color-line);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.58);
+  padding: 0 14px;
+  color: var(--color-muted);
+  font-size: 0.9rem;
+  font-weight: 850;
+}
+
+.card-feature-list svg {
+  color: var(--color-primary);
+  flex: 0 0 auto;
+}
+
+.card-showcase-visual {
+  position: relative;
+  display: grid;
+  min-height: 380px;
+  place-items: center;
+  perspective: 1300px;
+}
+
+.card-showcase-visual::before {
+  position: absolute;
+  inset: 18% 7% 8%;
+  border-radius: 999px;
+  background:
+    radial-gradient(circle at 45% 38%, rgba(184, 223, 85, 0.18), transparent 38%),
+    rgba(12, 124, 143, 0.14);
+  filter: blur(22px);
+  content: "";
+}
+
+.card-showcase-visual .product-card-scene {
+  transform: scale(1.08);
 }
 
 .products-section,
@@ -1354,6 +1415,7 @@ h1 {
 
   .hero-layout,
   .section-heading,
+  .card-showcase-section,
   .directory-section,
   .process-section,
   .product-grid,
@@ -1367,17 +1429,19 @@ h1 {
     min-height: auto;
   }
 
-  .hero-visuals {
-    min-height: var(--phone-scene-height);
+  .card-showcase-section {
+    gap: 22px;
   }
 
-  .product-card-scene {
-    left: 0;
-    bottom: 6px;
-    width: 260px;
+  .card-showcase-visual {
+    min-height: 330px;
+    order: -1;
+  }
+
+  .card-showcase-visual .product-card-scene {
+    width: 280px;
     min-width: 0;
-    transform: scale(0.86);
-    transform-origin: left bottom;
+    transform: scale(0.95);
   }
 
   .directory-benefits {
@@ -1423,15 +1487,21 @@ h1 {
     width: min(76%, var(--phone-width));
   }
 
-  .product-card-scene {
-    bottom: -2px;
-    left: -8px;
-    width: 218px;
-    transform: scale(0.64);
+  .card-showcase-section {
+    padding-top: 56px;
+  }
+
+  .card-showcase-visual {
+    min-height: 292px;
+  }
+
+  .card-showcase-visual .product-card-scene {
+    width: 234px;
+    transform: scale(0.78);
   }
 
   .product-card-stack {
-    min-height: 230px;
+    min-height: 252px;
   }
 
   .qr-product-card {

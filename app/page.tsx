@@ -11,6 +11,7 @@ import {
   LayoutPanelTop,
   MessageCircle,
   MousePointerClick,
+  QrCode,
   Sparkles,
   SearchCheck,
   Share2,
@@ -102,10 +103,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="hero-visuals">
-            <PhoneShowcase />
-            <ProductCardShowcase />
-          </div>
+          <PhoneShowcase />
         </div>
 
         <div className="metric-strip">
@@ -121,6 +119,36 @@ export default function Home() {
               <span>{metric.label}</span>
             </div>
           ))}
+        </div>
+      </section>
+
+      <section className="card-showcase-section" aria-labelledby="tarjeta-title">
+        <div className="card-showcase-copy" data-aos="fade-right" data-aos-duration="1000">
+          <p className="eyebrow">Producto fisico</p>
+          <h2 id="tarjeta-title">La tarjeta que abre todo.</h2>
+          <p>
+            Una pieza fisica con QR para entregar en reuniones, puntos de venta o eventos.
+            El cliente escanea y llega al directorio, WhatsApp o landing del negocio.
+          </p>
+
+          <div className="card-feature-list" aria-label="Incluye tarjeta QR">
+            <span>
+              <IdCard size={17} aria-hidden="true" />
+              Frente editable
+            </span>
+            <span>
+              <QrCode size={17} aria-hidden="true" />
+              QR visible
+            </span>
+            <span>
+              <MessageCircle size={17} aria-hidden="true" />
+              Contacto directo
+            </span>
+          </div>
+        </div>
+
+        <div className="card-showcase-visual">
+          <ProductCardShowcase />
         </div>
       </section>
 
