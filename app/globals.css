@@ -1362,6 +1362,36 @@ h1 {
   }
 }
 
+@keyframes mobileProductCardFront {
+  0%,
+  100% {
+    transform: rotateZ(-7deg) rotateY(-7deg) rotateX(5deg) translate3d(0, 0, 0);
+  }
+
+  45% {
+    transform: rotateZ(-5deg) rotateY(-4deg) rotateX(4deg) translate3d(-2px, -11px, 0);
+  }
+
+  70% {
+    transform: rotateZ(-8deg) rotateY(-8deg) rotateX(5deg) translate3d(1px, -4px, 0);
+  }
+}
+
+@keyframes mobileProductCardBack {
+  0%,
+  100% {
+    transform: rotateZ(7deg) rotateY(7deg) rotateX(5deg) translateZ(14px) translate3d(0, 0, 0);
+  }
+
+  48% {
+    transform: rotateZ(5deg) rotateY(4deg) rotateX(4deg) translateZ(20px) translate3d(2px, -13px, 0);
+  }
+
+  74% {
+    transform: rotateZ(8deg) rotateY(8deg) rotateX(5deg) translateZ(16px) translate3d(-1px, -5px, 0);
+  }
+}
+
 @keyframes drift {
   0%,
   100% {
@@ -1496,25 +1526,79 @@ h1 {
   }
 
   .card-showcase-visual {
-    min-height: 292px;
+    min-height: 318px;
   }
 
   .card-showcase-visual .product-card-scene {
-    width: 234px;
-    transform: scale(0.78);
+    width: min(100%, 332px);
+    transform: none;
   }
 
   .product-card-stack {
-    min-height: 252px;
+    min-height: 288px;
   }
 
   .qr-product-card {
-    width: 160px;
-    min-height: 202px;
+    width: 142px;
+    min-height: 190px;
+  }
+
+  .qr-product-card-front,
+  .qr-product-card-back {
+    will-change: transform;
+  }
+
+  .qr-product-card-front {
+    top: 46px;
+    left: 8px;
+    gap: 8px;
+    padding: 22px 14px 34px;
+    animation: mobileProductCardFront 5.8s ease-in-out infinite;
+    transform: rotateZ(-7deg) rotateY(-7deg) rotateX(5deg);
+  }
+
+  .qr-product-card-back {
+    top: 30px;
+    right: 8px;
+    gap: 7px;
+    padding: 18px 14px 16px;
+    animation: mobileProductCardBack 6.2s ease-in-out infinite 320ms;
+    transform: rotateZ(7deg) rotateY(7deg) rotateX(5deg) translateZ(14px);
+  }
+
+  .card-logo-mark {
+    width: 54px;
+    height: 54px;
+    border-radius: 15px;
+  }
+
+  .brand-card-lockup strong {
+    font-size: 1.1rem;
+  }
+
+  .card-social-row {
+    font-size: 0.42rem;
   }
 
   .qr-card-code {
-    width: 118px;
+    width: 104px;
+    gap: 1.5px;
+    border-width: 6px;
+  }
+
+  .qr-center-brand {
+    width: 34px;
+    height: 34px;
+    border-width: 3px;
+  }
+
+  .card-contact-title,
+  .qr-product-card-back small {
+    font-size: 0.5rem;
+  }
+
+  .qr-product-card-back > strong {
+    font-size: 0.68rem;
   }
 
   .directory-mockup {
@@ -1561,5 +1645,28 @@ h1 {
   .directory-copy h2,
   .cta-section h2 {
     font-size: clamp(1.82rem, 7.2vw, 2.55rem);
+  }
+}
+
+.product-card-scene[data-aos="genika-card-reveal"] {
+  opacity: 0;
+  filter: blur(12px);
+  transform: translate3d(0, 74px, 0) scale(0.86) rotateX(16deg) rotateZ(-4deg);
+  transition-property: opacity, filter, transform;
+}
+
+.product-card-scene[data-aos="genika-card-reveal"].aos-animate {
+  opacity: 1;
+  filter: blur(0);
+  transform: translate3d(0, 0, 0) scale(1) rotateX(0) rotateZ(0);
+}
+
+@media (max-width: 640px) {
+  .product-card-scene[data-aos="genika-card-reveal"] {
+    transform: translate3d(0, 62px, 0) scale(0.82) rotateX(10deg) rotateZ(-5deg);
+  }
+
+  .product-card-scene[data-aos="genika-card-reveal"].aos-animate {
+    transform: translate3d(0, 0, 0) scale(1) rotateX(0) rotateZ(0);
   }
 }
