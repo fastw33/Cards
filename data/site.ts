@@ -10,7 +10,7 @@ export const site = {
   },
   hero: {
     eyebrow: "Venta sin reimpresiones",
-    title: "Tarjetas inteligentes para vender mas.",
+    title: "Tarjetas inteligentes para negocios que crecen.",
     description:
       "Entregas una tarjeta fisica y Genika mantiene vivo el destino digital: contacto, catalogo, equipo, redes y datos comerciales desde un solo enlace.",
     primaryAction: "Cotizar tarjetas",
