@@ -123,6 +123,16 @@ export const site = {
       question: "Por que reduce desperdicio?",
       answer:
         "Porque cada cambio se resuelve en el destino digital, sin desechar material ya entregado."
+    },
+    {
+      question: "Puedo cambiar contactos?",
+      answer:
+        "Si. Genika puede actualizar numeros, cargos, enlaces o catalogo para mantener activa la misma tarjeta."
+    },
+    {
+      question: "Ayuda a vender mejor?",
+      answer:
+        "Si. Ordena contacto, catalogo y canales de venta para que el cliente llegue rapido a la accion correcta."
     }
   ]
 };
