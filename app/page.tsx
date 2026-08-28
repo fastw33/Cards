@@ -36,7 +36,7 @@ const directoryBenefits = [
   {
     icon: Share2,
     title: "Canales diversos",
-    text: "Un QR puede abrir directorio, landing, catalogo, redes, agenda o campanas."
+    text: "Una tarjeta puede abrir directorio, landing, catalogo, redes, agenda o campanas."
   }
 ];
 
@@ -127,12 +127,12 @@ export default function Home() {
           <p className="eyebrow">Producto fisico</p>
           <h2 id="tarjeta-title">Imprime una vez. Actualiza siempre.</h2>
           <p>
-            Una tarjeta QR para entregar en reuniones, puntos de venta o eventos. El QR no
-            vence: si cambia el numero, el equipo o el catalogo, se actualiza la URL.
+            Una tarjeta inteligente para entregar en reuniones, puntos de venta o eventos. No
+            pierde vigencia: si cambia el numero, el equipo o el catalogo, se actualiza la URL.
             Menos reimpresiones, menor desperdicio y mejor costo por contacto.
           </p>
 
-          <div className="card-feature-list" aria-label="Incluye tarjeta QR">
+          <div className="card-feature-list" aria-label="Incluye tarjeta inteligente">
             <span>
               <IdCard size={17} aria-hidden="true" />
               Tarjeta para siempre
@@ -156,7 +156,7 @@ export default function Home() {
       <section className="products-section" id="productos" aria-labelledby="productos-title">
         <div className="section-heading" data-aos="fade-up" data-aos-duration="1000">
           <p className="eyebrow">Productos</p>
-          <h2 id="productos-title">Tres formas de vender con un QR.</h2>
+          <h2 id="productos-title">Tres formas de vender con tarjetas.</h2>
         </div>
 
         <div className="product-grid">
@@ -219,7 +219,7 @@ export default function Home() {
       <section className="process-section" aria-labelledby="process-title">
         <div className="section-heading process-heading" data-aos="fade-up" data-aos-duration="1000">
           <p className="eyebrow">Como funciona</p>
-          <h2 id="process-title">Una tarjeta viva para vender mas.</h2>
+          <h2 id="process-title">Tarjetas listas para vender mas.</h2>
         </div>
 
         {site.process.map((item, index) => {
@@ -245,7 +245,7 @@ export default function Home() {
       <section className="plans-section" id="planes" aria-labelledby="planes-title">
         <div className="section-heading" data-aos="fade-up" data-aos-duration="1000">
           <p className="eyebrow">Paquetes</p>
-          <h2 id="planes-title">Elige el alcance del QR.</h2>
+          <h2 id="planes-title">Elige el alcance de tus tarjetas.</h2>
         </div>
 
         <div className="plans-grid">

@@ -1,7 +1,7 @@
 export const site = {
   brand: {
     name: "Genika",
-    subtitle: "Tarjeta inteligente QR + directorio",
+    subtitle: "Tarjetas inteligentes + directorio",
     initials: "G"
   },
   contact: {
@@ -9,11 +9,11 @@ export const site = {
     email: "hola@genika.co"
   },
   hero: {
-    eyebrow: "Tarjeta inteligente QR",
-    title: "Tarjetas QR que no vencen.",
+    eyebrow: "Tarjetas inteligentes",
+    title: "Tarjetas que no vencen.",
     description:
       "Imprime una vez y actualiza siempre. Si cambia el numero, el catalogo o el equipo, Genika ajusta la URL sin perder las tarjetas entregadas.",
-    primaryAction: "Cotizar tarjeta QR",
+    primaryAction: "Cotizar tarjetas",
     secondaryAction: "Ver productos"
   },
   proof: [
@@ -23,7 +23,7 @@ export const site = {
     "Canales diversos"
   ],
   metrics: [
-    { value: "QR", label: "Siempre activo porque controlamos la URL del cliente." },
+    { value: "URL", label: "Siempre actualizable porque controlamos el enlace del cliente." },
     { value: "2000", label: "Unidades en formato eficiente para optimizar costo y alcance." },
     { value: "0", label: "Tarjetas perdidas cuando cambias numero, enlaces o catalogo." }
   ],
@@ -31,19 +31,19 @@ export const site = {
     {
       title: "Tarjeta normal",
       description:
-        "Una tarjeta fisica con QR permanente para WhatsApp, redes, ubicacion o landing.",
+        "Una tarjeta fisica con enlace inteligente para WhatsApp, redes, ubicacion o landing.",
       detail: "Ideal para emprendedores, tiendas y vendedores."
     },
     {
       title: "Directorio empresa",
       description:
         "Minimo 3 empleados, perfiles por asesor y opcion de catalogo en el mismo enlace.",
-      detail: "Un QR para dirigir clientes al contacto correcto."
+      detail: "Una tarjeta para dirigir clientes al contacto correcto."
     },
     {
-      title: "Directorio + data",
+      title: "Directorio + datos",
       description:
-        "Incluye directorio, catalogo y entrega periodica de datos del QR digital.",
+        "Incluye directorio, catalogo y entrega periodica de datos del enlace digital.",
       detail: "Para equipos que quieren medir visitas, clics y oportunidades."
     }
   ],
@@ -57,7 +57,7 @@ export const site = {
     {
       step: "01",
       title: "Imprime una vez",
-      text: "La tarjeta sale con un QR propio y una URL controlada por Genika."
+      text: "La tarjeta sale con un enlace unico y una URL controlada por Genika."
     },
     {
       step: "02",
@@ -67,15 +67,15 @@ export const site = {
     {
       step: "03",
       title: "Vende por canales",
-      text: "El QR conecta WhatsApp, directorio, landing, redes, catalogo y data comercial."
+      text: "La tarjeta conecta WhatsApp, directorio, landing, redes, catalogo y data comercial."
     }
   ],
   plans: [
     {
       name: "Normal",
-      price: "Tarjeta QR",
+      price: "Tarjeta inteligente",
       description: "Tarjeta fisica para contacto directo y datos siempre actualizables.",
-      features: ["QR permanente", "WhatsApp y redes", "Cambios sin reimprimir"]
+      features: ["Enlace permanente", "WhatsApp y redes", "Cambios sin reimprimir"]
     },
     {
       name: "Empresa",
@@ -84,17 +84,17 @@ export const site = {
       features: ["Directorio por asesor", "Catalogo", "Contacto por area"]
     },
     {
-      name: "Data QR",
+      name: "Datos",
       price: "Directorio + data",
-      description: "Lo anterior mas entrega periodica de datos del QR digital.",
+      description: "Lo anterior mas entrega periodica de datos del enlace digital.",
       features: ["Visitas y clics", "Reportes periodicos", "Mejor lectura comercial"]
     }
   ],
   faq: [
     {
-      question: "El QR se vence?",
+      question: "La tarjeta se vence?",
       answer:
-        "No. El QR apunta a una URL que Genika administra, por eso podemos actualizar informacion sin cambiar la tarjeta."
+        "No. El codigo apunta a una URL que Genika administra, por eso podemos actualizar informacion sin cambiar la tarjeta."
     },
     {
       question: "Que pasa si cambia el numero?",
@@ -104,7 +104,7 @@ export const site = {
     {
       question: "Para que sirve el catalogo?",
       answer:
-        "Para mostrar productos o servicios desde el mismo QR y abrir mas canales de venta."
+        "Para mostrar productos o servicios desde la misma tarjeta y abrir mas canales de venta."
     },
     {
       question: "Por que reduce desperdicio?",
