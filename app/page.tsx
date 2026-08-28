@@ -197,6 +197,7 @@ export default async function Home() {
               <h3>{plan.name}</h3>
               <strong>{plan.price}</strong>
               <p>{plan.description}</p>
+              <span className="plan-includes">{site.labels.planIncludes}</span>
               <ul>
                 {plan.features.map((feature) => (
                   <li key={feature}>

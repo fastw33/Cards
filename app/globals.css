@@ -1089,7 +1089,7 @@ h1 {
 .plan-card {
   display: flex;
   flex-direction: column;
-  min-height: 420px;
+  min-height: 500px;
 }
 
 .plan-card:nth-child(2) {
@@ -1107,11 +1107,27 @@ h1 {
   font-size: 2rem;
 }
 
+.plan-includes {
+  display: inline-flex;
+  width: fit-content;
+  min-height: 28px;
+  align-items: center;
+  margin-top: 22px;
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--color-primary), white 86%);
+  color: var(--color-primary);
+  padding: 0 11px;
+  font-size: 0.72rem;
+  font-weight: 950;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
 .plan-card ul {
   display: grid;
-  gap: 12px;
-  padding: 24px 0 0;
-  margin: 24px 0 0;
+  gap: 11px;
+  padding: 18px 0 0;
+  margin: 0;
   border-top: 1px solid var(--color-line);
   list-style: none;
 }
@@ -1130,7 +1146,7 @@ h1 {
   align-items: center;
   justify-content: center;
   gap: 9px;
-  margin-top: auto;
+  margin-top: 30px;
   border: 1px solid rgba(35, 196, 202, 0.34);
   border-radius: 999px;
   background: color-mix(in srgb, var(--color-primary-soft), white 54%);

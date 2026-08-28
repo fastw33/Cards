@@ -27,6 +27,7 @@ export type SiteContent = {
     us: string;
     plansEyebrow: string;
     plansTitle: string;
+    planIncludes: string;
     faqAria: string;
     floatingWhatsapp: string;
   };
@@ -134,6 +135,7 @@ export const siteByMarket: Record<Market, SiteContent> = {
       us: "US",
       plansEyebrow: "Incluye",
       plansTitle: "Compara el alcance.",
+      planIncludes: "Incluye",
       faqAria: "Preguntas frecuentes",
       floatingWhatsapp: "Click WhatsApp"
     },
@@ -240,7 +242,12 @@ export const siteByMarket: Record<Market, SiteContent> = {
         description: "Para contacto personal, marca comercial o punto de venta.",
         action: "Cotizar individual",
         whatsappMessage: "Hola Genika, quiero cotizar el plan Individual de tarjetas.",
-        features: ["Datos actualizables", "WhatsApp y redes", "Landing simple"]
+        features: [
+          "2000 tarjetas fisicas",
+          "Subdominio y administracion por 1 ano",
+          "2 a 4 usuarios",
+          "Envio a cargo del comprador"
+        ]
       },
       {
         name: "Equipo",
@@ -248,7 +255,15 @@ export const siteByMarket: Record<Market, SiteContent> = {
         description: "Para empresas con minimo 3 empleados, directorio y catalogo.",
         action: "Cotizar equipo",
         whatsappMessage: "Hola Genika, quiero cotizar el plan Equipo con directorio y catalogo.",
-        features: ["Perfiles por asesor", "Areas o cargos", "Catalogo incluido"]
+        features: [
+          "2000 tarjetas fisicas",
+          "Subdominio y administracion por 1 ano",
+          "2 a 4 usuarios",
+          "Landing page",
+          "Catalogo o brochure digital",
+          "Ubicacion con Waze y Maps",
+          "Envio a cargo del comprador"
+        ]
       },
       {
         name: "Lectura de datos",
@@ -319,6 +334,7 @@ export const siteByMarket: Record<Market, SiteContent> = {
       us: "US",
       plansEyebrow: "Included",
       plansTitle: "Compare the scope.",
+      planIncludes: "Includes",
       faqAria: "Frequently asked questions",
       floatingWhatsapp: "Click WhatsApp"
     },
@@ -424,7 +440,12 @@ export const siteByMarket: Record<Market, SiteContent> = {
         description: "For a personal contact, commercial brand or sales point.",
         action: "Quote individual",
         whatsappMessage: "Hello Genika, I want to quote the Individual card plan.",
-        features: ["Editable data", "WhatsApp and social links", "Simple landing page"]
+        features: [
+          "2,000 physical cards",
+          "Subdomain and 1 year administration",
+          "2 to 4 users",
+          "Shipping charged to buyer"
+        ]
       },
       {
         name: "Team",
@@ -432,7 +453,15 @@ export const siteByMarket: Record<Market, SiteContent> = {
         description: "For companies with at least 3 employees, a directory and catalog.",
         action: "Quote team",
         whatsappMessage: "Hello Genika, I want to quote the Team plan with directory and catalog.",
-        features: ["Advisor profiles", "Roles or departments", "Catalog included"]
+        features: [
+          "2,000 physical cards",
+          "Subdomain and 1 year administration",
+          "2 to 4 users",
+          "Landing page",
+          "Digital catalog or brochure",
+          "Waze and Maps location",
+          "Shipping charged to buyer"
+        ]
       },
       {
         name: "Data review",
