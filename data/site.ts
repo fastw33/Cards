@@ -86,21 +86,21 @@ export const site = {
   plans: [
     {
       name: "Individual",
-      price: "Una marca",
+      price: "USD 250 + IVA",
       description: "Para contacto personal, marca comercial o punto de venta.",
       features: ["Datos actualizables", "WhatsApp y redes", "Landing simple"]
     },
     {
       name: "Equipo",
-      price: "Desde 3 empleados",
+      price: "USD 450 + IVA",
       description: "Para empresas que necesitan repartir contactos sin confundir al cliente.",
       features: ["Perfiles por asesor", "Areas o cargos", "Catalogo opcional"]
     },
     {
       name: "Datos",
       price: "Lectura comercial",
-      description: "Para equipos que quieren revisar actividad y mejorar sus canales.",
-      features: ["Visitas y clics", "Reporte periodico", "Seguimiento de interes"]
+      description: "Para cotizar segun necesidad despues de revisar alcance en una reunion.",
+      features: ["Reunion de alcance", "Reporte periodico", "Seguimiento de interes"]
     }
   ],
   faq: [
