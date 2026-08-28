@@ -244,7 +244,7 @@ export const siteByMarket: Record<Market, SiteContent> = {
         whatsappMessage: "Hola Genika, quiero cotizar el plan Individual de tarjetas.",
         features: [
           "2000 tarjetas fisicas",
-          "Subdominio y administracion por 12 meses",
+          "Subdominio y administración por 1 año",
           "2 a 4 usuarios",
           "Envio a cargo del comprador"
         ]
@@ -257,7 +257,7 @@ export const siteByMarket: Record<Market, SiteContent> = {
         whatsappMessage: "Hola Genika, quiero cotizar el plan Equipo con directorio y catalogo.",
         features: [
           "2000 tarjetas fisicas",
-          "Subdominio y administracion por 12 meses",
+          "Subdominio y administración por 1 año",
           "2 a 4 usuarios",
           "Landing page",
           "Catalogo o brochure digital",
