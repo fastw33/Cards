@@ -10,41 +10,41 @@ export const site = {
   },
   hero: {
     eyebrow: "Tarjeta inteligente QR",
-    title: "Tu equipo conectado al instante.",
+    title: "Tarjetas QR que no vencen.",
     description:
-      "Una solucion fisica y digital para centralizar el contacto de tu empresa: el cliente escanea, elige a la persona correcta y abre WhatsApp en un toque.",
+      "Imprime una vez y actualiza siempre. Si cambia el numero, el catalogo o el equipo, Genika ajusta la URL sin perder las tarjetas entregadas.",
     primaryAction: "Cotizar tarjeta QR",
-    secondaryAction: "Ver propuesta"
+    secondaryAction: "Ver productos"
   },
   proof: [
-    "QR por empresa",
-    "Directorio activo",
-    "WhatsApp directo",
-    "Sin reimprimir"
+    "Contacto facil",
+    "Respuesta rapida",
+    "Gestion agil",
+    "Canales diversos"
   ],
   metrics: [
-    { value: "01", label: "Tarjeta fisica con QR unico de la empresa." },
-    { value: "02", label: "Directorio digital para integrantes o areas." },
-    { value: "03", label: "Contacto inmediato por WhatsApp o agenda." }
+    { value: "QR", label: "Siempre activo porque controlamos la URL del cliente." },
+    { value: "2000", label: "Unidades en formato eficiente para optimizar costo y alcance." },
+    { value: "0", label: "Tarjetas perdidas cuando cambias numero, enlaces o catalogo." }
   ],
   products: [
     {
-      title: "Contacto directo",
+      title: "Tarjeta normal",
       description:
-        "El QR abre una experiencia simple para elegir asesor, area o departamento.",
-      detail: "Menos friccion, mas conversaciones utiles."
+        "Una tarjeta fisica con QR permanente para WhatsApp, redes, ubicacion o landing.",
+      detail: "Ideal para emprendedores, tiendas y vendedores."
     },
     {
-      title: "Imagen profesional",
+      title: "Directorio empresa",
       description:
-        "La empresa entrega una tarjeta fisica elegante y un directorio digital ordenado.",
-      detail: "Ideal para ventas, servicio y atencion al cliente."
+        "Minimo 3 empleados, perfiles por asesor y opcion de catalogo en el mismo enlace.",
+      detail: "Un QR para dirigir clientes al contacto correcto."
     },
     {
-      title: "Gestion flexible",
+      title: "Directorio + data",
       description:
-        "Puedes actualizar contactos, cargos, links y rutas sin volver a imprimir tarjetas.",
-      detail: "Escala con el equipo y con nuevas necesidades."
+        "Incluye directorio, catalogo y entrega periodica de datos del QR digital.",
+      detail: "Para equipos que quieren medir visitas, clics y oportunidades."
     }
   ],
   directory: [
@@ -56,55 +56,60 @@ export const site = {
   process: [
     {
       step: "01",
-      title: "Entrega la tarjeta",
-      text: "Cada tarjeta fisica lleva el QR unico del negocio o del equipo."
+      title: "Imprime una vez",
+      text: "La tarjeta sale con un QR propio y una URL controlada por Genika."
     },
     {
       step: "02",
-      title: "Escaneo rapido",
-      text: "El cliente abre el directorio activo con la camara de su celular."
+      title: "Actualiza siempre",
+      text: "Cambios de numero, asesores, catalogo o enlaces se hacen sin reimprimir."
     },
     {
       step: "03",
-      title: "Contacto inmediato",
-      text: "Un toque en el perfil abre WhatsApp con una ruta clara de conversacion."
+      title: "Vende por canales",
+      text: "El QR conecta WhatsApp, directorio, landing, redes, catalogo y data comercial."
     }
   ],
   plans: [
     {
-      name: "Inicial",
-      price: "Desde $250k",
-      description: "Tarjetas fisicas con QR y directorio activo para empezar.",
-      features: ["2 integrantes", "QR unico", "Directorio base"]
+      name: "Normal",
+      price: "Tarjeta QR",
+      description: "Tarjeta fisica para contacto directo y datos siempre actualizables.",
+      features: ["QR permanente", "WhatsApp y redes", "Cambios sin reimprimir"]
     },
     {
-      name: "Integrante adicional",
-      price: "Desde $100k",
-      description: "Agrega una tarjeta fisica y un perfil adicional al directorio.",
-      features: ["1 perfil nuevo", "Boton WhatsApp", "Datos editables"]
+      name: "Empresa",
+      price: "Min. 3 empleados",
+      description: "Directorio para equipos con perfiles, areas y catalogo visible.",
+      features: ["Directorio por asesor", "Catalogo", "Contacto por area"]
     },
     {
-      name: "Empresarial",
-      price: "Desde $450k",
-      description: "Directorio multiequipo con configuracion avanzada para crecer.",
-      features: ["Varios equipos", "Rutas por area", "Escalabilidad"]
+      name: "Data QR",
+      price: "Directorio + data",
+      description: "Lo anterior mas entrega periodica de datos del QR digital.",
+      features: ["Visitas y clics", "Reportes periodicos", "Mejor lectura comercial"]
     }
   ],
   faq: [
     {
-      question: "Que se entrega al cliente?",
+      question: "El QR se vence?",
       answer:
-        "Una pagina publica lista para compartir, optimizada para movil y con botones de contacto directo."
+        "No. El QR apunta a una URL que Genika administra, por eso podemos actualizar informacion sin cambiar la tarjeta."
     },
     {
-      question: "Se puede personalizar por marca?",
+      question: "Que pasa si cambia el numero?",
       answer:
-        "Si. Colores, textos, logo, cargos, servicios y enlaces estan pensados para cambiarse rapido."
+        "Actualizamos el destino digital y las tarjetas ya impresas siguen funcionando."
     },
     {
-      question: "Esto reemplaza una web completa?",
+      question: "Para que sirve el catalogo?",
       answer:
-        "No siempre. Es una solucion rapida para empezar con una tarjeta, un directorio o una landing antes de construir algo mas grande."
+        "Para mostrar productos o servicios desde el mismo QR y abrir mas canales de venta."
+    },
+    {
+      question: "Por que reduce desperdicio?",
+      answer:
+        "Porque no necesitas reimprimir cada vez que cambia un numero, un asesor o una promocion."
     }
   ]
 };
