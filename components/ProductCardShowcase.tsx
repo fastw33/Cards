@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { Contact, Sparkles } from "lucide-react";
+import type { Site } from "@/data/site";
 
 const qrBlocks = [
   [1, 1, 1, 1, 1, 0, 1, 0, 1, 0, 1, 1, 1, 1, 1],
@@ -19,11 +20,11 @@ const qrBlocks = [
   [1, 1, 1, 1, 1, 0, 1, 0, 1, 0, 1, 1, 0, 1, 0]
 ].flat();
 
-export function ProductCardShowcase() {
+export function ProductCardShowcase({ copy }: { copy: Site["productCard"] }) {
   return (
     <div
       className="product-card-scene"
-      aria-label="Vista 3D de tarjeta fisica inteligente"
+      aria-label={copy.ariaLabel}
       data-aos="genika-card-reveal"
       data-aos-delay="260"
       data-aos-duration="1350"
@@ -35,12 +36,12 @@ export function ProductCardShowcase() {
             <Image src="/Genika.webp" alt="" width={42} height={42} />
           </div>
           <div className="brand-card-lockup">
-            <span>PON ACA</span>
-            <strong>TU MARCA</strong>
+            <span>{copy.frontSmall}</span>
+            <strong>{copy.frontTitle}</strong>
           </div>
           <div className="card-social-row">
-            <span>@tu_marca</span>
-            <span>Tu negocio</span>
+            <span>{copy.socialLeft}</span>
+            <span>{copy.socialRight}</span>
           </div>
           <div className="card-mountain-strip" />
         </article>
@@ -48,9 +49,9 @@ export function ProductCardShowcase() {
         <article className="qr-product-card qr-product-card-back">
           <div className="card-contact-title">
             <Contact size={15} aria-hidden="true" />
-            Contacto general
+            {copy.backTitle}
           </div>
-          <strong>+57 300 000 0000</strong>
+          <strong>{copy.backPhone}</strong>
           <div className="qr-card-code" aria-hidden="true">
             {qrBlocks.map((active, index) => (
               <span className={active ? "is-active" : undefined} key={`qr-${index}`} />
@@ -59,7 +60,7 @@ export function ProductCardShowcase() {
               <Sparkles size={18} aria-hidden="true" />
             </div>
           </div>
-          <small>Escanea y abre el directorio</small>
+          <small>{copy.backFoot}</small>
         </article>
       </div>
     </div>

@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Manrope, Space_Grotesk } from "next/font/google";
 import { AosProvider } from "@/components/AosProvider";
+import { siteByMarket } from "@/data/site";
+import { getMarketFromRequest } from "@/lib/market";
 import "aos/dist/aos.css";
 import "./globals.css";
 
@@ -16,19 +18,26 @@ const spaceGrotesk = Space_Grotesk({
   display: "swap"
 });
 
-export const metadata: Metadata = {
-  title: "Genika | Tarjetas digitales, directorios y landings",
-  description:
-    "Pagina de venta para tarjetas digitales, directorios de contacto y landings express para empresas."
-};
+export async function generateMetadata(): Promise<Metadata> {
+  const market = await getMarketFromRequest();
+  const site = siteByMarket[market];
 
-export default function RootLayout({
+  return {
+    title: site.meta.title,
+    description: site.meta.description
+  };
+}
+
+export default async function RootLayout({
   children
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const market = await getMarketFromRequest();
+  const site = siteByMarket[market];
+
   return (
-    <html lang="es">
+    <html lang={site.locale}>
       <body className={`${manrope.variable} ${spaceGrotesk.variable}`}>
         <AosProvider />
         {children}

@@ -13,9 +13,11 @@ import {
   SearchCheck,
   Share2
 } from "lucide-react";
+import { MarketSwitcher } from "@/components/MarketSwitcher";
 import { PhoneShowcase } from "@/components/PhoneShowcase";
 import { ProductCardShowcase } from "@/components/ProductCardShowcase";
-import { site } from "@/data/site";
+import { siteByMarket, type Site } from "@/data/site";
+import { getMarketFromRequest } from "@/lib/market";
 
 const advantageIcons = [
   IdCard,
@@ -28,7 +30,9 @@ const advantageIcons = [
   SearchCheck
 ];
 
-function BrandMark() {
+const cardFeatureIcons = [IdCard, QrCode, MessageCircle];
+
+function BrandMark({ site }: { site: Site }) {
   return (
     <a className="brand-mark" href="#inicio" aria-label={site.brand.name}>
       <span className="brand-logo-orb">
@@ -42,7 +46,14 @@ function BrandMark() {
   );
 }
 
-export default function Home() {
+function getWhatsappUrl(baseUrl: string, message: string) {
+  return `${baseUrl}?text=${encodeURIComponent(message)}`;
+}
+
+export default async function Home() {
+  const market = await getMarketFromRequest();
+  const site = siteByMarket[market];
+
   return (
     <main className="page-shell">
       <div className="aurora aurora-one" />
@@ -51,12 +62,15 @@ export default function Home() {
 
       <section className="hero-section" id="inicio">
         <header className="topbar" data-aos="fade-down" data-aos-delay="120">
-          <BrandMark />
-          <nav className="topnav" aria-label="Secciones principales">
-            <a href="#ventajas">Ventajas</a>
-            <a href="#planes">Planes</a>
-            <a href={site.contact.whatsappUrl}>Contacto</a>
-          </nav>
+          <BrandMark site={site} />
+          <div className="topbar-actions">
+            <nav className="topnav" aria-label={site.labels.topnav}>
+              <a href="#ventajas">{site.labels.advantages}</a>
+              <a href="#planes">{site.labels.plans}</a>
+              <a href={site.contact.whatsappUrl}>{site.labels.contact}</a>
+            </nav>
+            <MarketSwitcher market={market} labels={site.labels} />
+          </div>
         </header>
 
         <div className="hero-layout">
@@ -81,7 +95,7 @@ export default function Home() {
               </a>
             </div>
 
-            <div className="proof-strip" aria-label="Incluye">
+            <div className="proof-strip" aria-label={site.labels.proof}>
               {site.proof.map((item) => (
                 <span key={item}>
                   <Check size={15} aria-hidden="true" />
@@ -91,7 +105,7 @@ export default function Home() {
             </div>
           </div>
 
-          <PhoneShowcase />
+          <PhoneShowcase site={site} />
         </div>
 
         <div className="metric-strip">
@@ -112,39 +126,33 @@ export default function Home() {
 
       <section className="card-showcase-section" aria-labelledby="tarjeta-title">
         <div className="card-showcase-copy" data-aos="fade-right" data-aos-duration="1000">
-          <p className="eyebrow">Producto fisico</p>
-          <h2 id="tarjeta-title">Una tarjeta. Muchos destinos.</h2>
-          <p>
-            Una pieza fisica para reuniones, mostradores, domicilios o eventos. El cliente
-            escanea y llega al canal correcto; tu negocio evita reimpresiones, desperdicio y
-            costos por informacion desactualizada.
-          </p>
+          <p className="eyebrow">{site.cardShowcase.eyebrow}</p>
+          <h2 id="tarjeta-title">{site.cardShowcase.title}</h2>
+          <p>{site.cardShowcase.description}</p>
 
-          <div className="card-feature-list" aria-label="Incluye tarjeta inteligente">
-            <span>
-              <IdCard size={17} aria-hidden="true" />
-              Tarjeta para siempre
-            </span>
-            <span>
-              <QrCode size={17} aria-hidden="true" />
-              Destino actualizable
-            </span>
-            <span>
-              <MessageCircle size={17} aria-hidden="true" />
-              Contacto directo
-            </span>
+          <div className="card-feature-list" aria-label={site.cardShowcase.featuresLabel}>
+            {site.cardShowcase.features.map((feature, index) => {
+              const Icon = cardFeatureIcons[index] ?? Check;
+
+              return (
+                <span key={feature}>
+                  <Icon size={17} aria-hidden="true" />
+                  {feature}
+                </span>
+              );
+            })}
           </div>
         </div>
 
         <div className="card-showcase-visual">
-          <ProductCardShowcase />
+          <ProductCardShowcase copy={site.productCard} />
         </div>
       </section>
 
       <section className="advantages-section" id="ventajas" aria-labelledby="ventajas-title">
         <div className="section-heading" data-aos="fade-up" data-aos-duration="1000">
-          <p className="eyebrow">Ventajas</p>
-          <h2 id="ventajas-title">Ahorra, actualiza y vende.</h2>
+          <p className="eyebrow">{site.advantagesSection.eyebrow}</p>
+          <h2 id="ventajas-title">{site.advantagesSection.title}</h2>
         </div>
 
         <div className="advantages-grid">
@@ -173,8 +181,8 @@ export default function Home() {
 
       <section className="plans-section" id="planes" aria-labelledby="planes-title">
         <div className="section-heading" data-aos="fade-up" data-aos-duration="1000">
-          <p className="eyebrow">Incluye</p>
-          <h2 id="planes-title">Compara el alcance.</h2>
+          <p className="eyebrow">{site.labels.plansEyebrow}</p>
+          <h2 id="planes-title">{site.labels.plansTitle}</h2>
         </div>
 
         <div className="plans-grid">
@@ -197,12 +205,19 @@ export default function Home() {
                   </li>
                 ))}
               </ul>
+              <a
+                className="plan-action"
+                href={getWhatsappUrl(site.contact.whatsappUrl, plan.whatsappMessage)}
+              >
+                <MessageCircle size={17} aria-hidden="true" />
+                {plan.action}
+              </a>
             </article>
           ))}
         </div>
       </section>
 
-      <section className="faq-section" aria-label="Preguntas frecuentes">
+      <section className="faq-section" aria-label={site.labels.faqAria}>
         {site.faq.map((item, index) => (
           <article
             className="faq-card"
@@ -219,23 +234,23 @@ export default function Home() {
 
       <section className="cta-section" data-aos="zoom-in-up" data-aos-duration="1000">
         <div>
-          <p className="eyebrow">Cotizacion</p>
-          <h2>Cotiza tus tarjetas Genika.</h2>
+          <p className="eyebrow">{site.cta.eyebrow}</p>
+          <h2>{site.cta.title}</h2>
         </div>
         <a className="button button-primary" href={site.contact.whatsappUrl}>
           <MessageCircle size={18} aria-hidden="true" />
-          Cotizar por WhatsApp
+          {site.cta.action}
         </a>
       </section>
 
       <footer className="footer">
-        <BrandMark />
+        <BrandMark site={site} />
         <a href={`mailto:${site.contact.email}`}>{site.contact.email}</a>
       </footer>
 
-      <a className="whatsapp-float" href={site.contact.whatsappUrl} aria-label="Cotizar por WhatsApp">
+      <a className="whatsapp-float" href={site.contact.whatsappUrl} aria-label={site.cta.action}>
         <MessageCircle size={22} aria-hidden="true" />
-        <span>Click WhatsApp</span>
+        <span>{site.labels.floatingWhatsapp}</span>
       </a>
     </main>
   );

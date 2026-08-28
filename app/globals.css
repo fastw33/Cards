@@ -233,6 +233,54 @@ h3,
   transform: translateY(-1px);
 }
 
+.topbar-actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+  min-width: 0;
+}
+
+.market-switcher {
+  display: inline-flex;
+  flex: 0 0 auto;
+  gap: 4px;
+  border: 1px solid var(--color-line);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.72);
+  padding: 4px;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.58);
+}
+
+.market-switcher button {
+  min-width: 58px;
+  min-height: 34px;
+  border: 0;
+  border-radius: 999px;
+  background: transparent;
+  color: var(--color-muted);
+  cursor: pointer;
+  font: inherit;
+  font-size: 0.74rem;
+  font-weight: 950;
+  letter-spacing: 0;
+  transition:
+    background 220ms var(--ease),
+    color 220ms var(--ease),
+    transform 220ms var(--ease);
+}
+
+.market-switcher button:hover {
+  color: var(--color-ink);
+  transform: translateY(-1px);
+}
+
+.market-switcher button[aria-pressed="true"] {
+  background: var(--color-dark);
+  color: white;
+  box-shadow: 0 10px 20px rgba(18, 50, 98, 0.14);
+}
+
 .hero-layout {
   display: grid;
   grid-template-columns: minmax(0, 0.98fr) minmax(420px, 1fr);
@@ -1039,6 +1087,8 @@ h1 {
 }
 
 .plan-card {
+  display: flex;
+  flex-direction: column;
   min-height: 420px;
 }
 
@@ -1072,6 +1122,32 @@ h1 {
   gap: 10px;
   color: var(--color-ink);
   font-weight: 800;
+}
+
+.plan-action {
+  display: inline-flex;
+  min-height: 46px;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  margin-top: auto;
+  border: 1px solid rgba(35, 196, 202, 0.34);
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--color-primary-soft), white 54%);
+  color: var(--color-dark);
+  padding: 0 16px;
+  font-weight: 950;
+  transition:
+    transform 220ms var(--ease),
+    box-shadow 220ms var(--ease),
+    background 220ms var(--ease);
+}
+
+.plan-action:hover {
+  background: var(--color-iridescent);
+  color: white;
+  box-shadow: 0 16px 30px rgba(64, 116, 186, 0.16);
+  transform: translateY(-2px);
 }
 
 .faq-card {
@@ -1246,6 +1322,11 @@ h1 {
     border-radius: var(--radius-medium);
   }
 
+  .topbar-actions {
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+
   .hero-layout,
   .section-heading,
   .card-showcase-section,
@@ -1295,9 +1376,17 @@ h1 {
     flex-direction: column;
   }
 
-  .topnav {
+  .topbar-actions {
     width: 100%;
+    justify-content: space-between;
+  }
+
+  .topnav {
     justify-content: flex-start;
+  }
+
+  .market-switcher {
+    margin-left: auto;
   }
 
   h1 {
