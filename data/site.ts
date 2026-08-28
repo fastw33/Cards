@@ -53,23 +53,6 @@ export const site = {
     { name: "Asesor 03", role: "Ventas corporativas", tag: "Perfil" },
     { name: "Soporte", role: "Atencion al cliente", tag: "Chat" }
   ],
-  process: [
-    {
-      step: "01",
-      title: "Disenamos tu tarjeta",
-      text: "Adaptamos marca, datos, llamada a la accion y destino principal."
-    },
-    {
-      step: "02",
-      title: "Activamos el enlace",
-      text: "Conectamos contacto, directorio, catalogo, redes o landing segun el producto."
-    },
-    {
-      step: "03",
-      title: "Ajustamos cuando cambie",
-      text: "Numeros, asesores, campanas y catalogos pueden evolucionar despues de entregar tarjetas."
-    }
-  ],
   plans: [
     {
       name: "Individual",

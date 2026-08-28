@@ -2,7 +2,6 @@ import Image from "next/image";
 import {
   ArrowRight,
   BadgeCheck,
-  Building2,
   Check,
   Contact,
   Globe2,
@@ -11,7 +10,6 @@ import {
   MessageCircle,
   MousePointerClick,
   QrCode,
-  Sparkles,
   SearchCheck,
   Share2,
   UsersRound
@@ -21,7 +19,6 @@ import { ProductCardShowcase } from "@/components/ProductCardShowcase";
 import { site } from "@/data/site";
 
 const productIcons = [Contact, UsersRound, LayoutPanelTop];
-const processIcons = [BadgeCheck, Building2, Sparkles];
 const directoryBenefits = [
   {
     icon: SearchCheck,
@@ -161,7 +158,7 @@ export default function Home() {
       <section className="products-section" id="productos" aria-labelledby="productos-title">
         <div className="section-heading" data-aos="fade-up" data-aos-duration="1000">
           <p className="eyebrow">Productos</p>
-          <h2 id="productos-title">Tres productos para tres necesidades.</h2>
+          <h2 id="productos-title">Tres productos vendibles.</h2>
         </div>
 
         <div className="product-grid">
@@ -221,36 +218,10 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="process-section" aria-labelledby="process-title">
-        <div className="section-heading process-heading" data-aos="fade-up" data-aos-duration="1000">
-          <p className="eyebrow">Como funciona</p>
-          <h2 id="process-title">De idea a tarjetas listas.</h2>
-        </div>
-
-        {site.process.map((item, index) => {
-          const Icon = processIcons[index];
-
-          return (
-            <article
-              className="process-card"
-              key={item.step}
-              data-aos="fade-up"
-              data-aos-delay={`${index * 140}`}
-              data-aos-duration="1000"
-            >
-              <span className="step-number">{item.step}</span>
-              <Icon size={24} aria-hidden="true" />
-              <h3>{item.title}</h3>
-              <p>{item.text}</p>
-            </article>
-          );
-        })}
-      </section>
-
       <section className="plans-section" id="planes" aria-labelledby="planes-title">
         <div className="section-heading" data-aos="fade-up" data-aos-duration="1000">
-          <p className="eyebrow">Alcance</p>
-          <h2 id="planes-title">Define que necesita tu negocio.</h2>
+          <p className="eyebrow">Incluye</p>
+          <h2 id="planes-title">Compara el alcance.</h2>
         </div>
 
         <div className="plans-grid">
