@@ -14,7 +14,7 @@ export const site = {
     description:
       "Entregas una tarjeta fisica y Genika mantiene vivo el destino digital: contacto, catalogo, equipo, redes y datos comerciales desde un solo enlace.",
     primaryAction: "Cotizar tarjetas",
-    secondaryAction: "Ver productos"
+    secondaryAction: "Ver ventajas"
   },
   proof: [
     "Cambio de numero",
@@ -27,24 +27,54 @@ export const site = {
     { value: "2x", label: "Mas aprovechamiento frente a una tarjeta convencional." },
     { value: "0", label: "Reimpresiones por cambios de numero, catalogo o asesores." }
   ],
-  products: [
+  advantages: [
     {
-      title: "Tarjeta individual",
+      title: "Tarjeta para siempre",
       description:
-        "Para una persona, vendedor o negocio que necesita contacto directo y presencia rapida.",
-      detail: "WhatsApp, redes, ubicacion y datos en una sola tarjeta."
+        "La tarjeta sigue funcionando aunque cambie el numero, el catalogo o el equipo.",
+      detail: "No pierdes material ya entregado."
     },
     {
-      title: "Directorio empresa",
+      title: "Ahorro real",
       description:
-        "Para equipos desde 3 empleados que necesitan ordenar asesores, areas y rutas de contacto.",
-      detail: "Cada visitante encuentra rapido a quien necesita."
+        "Un formato eficiente para campanas de alto volumen y equipos comerciales.",
+      detail: "Mas aprovechamiento frente a una tarjeta convencional."
     },
     {
-      title: "Directorio con datos",
+      title: "Menos desperdicio",
       description:
-        "Para empresas que quieren acompanamiento, catalogo y lectura periodica del movimiento digital.",
-      detail: "Visitas, clics y oportunidades para tomar mejores decisiones."
+        "Los cambios se hacen en el destino digital, sin botar tarjetas por datos vencidos.",
+      detail: "Una venta mas limpia y sostenible."
+    },
+    {
+      title: "Contacto facil",
+      description:
+        "El cliente entiende de inmediato donde tocar y con quien hablar.",
+      detail: "Menos preguntas, mas conversaciones."
+    },
+    {
+      title: "Rapido y agil",
+      description:
+        "Reduce pasos: no busca numeros, no guarda contactos y no espera respuesta interna.",
+      detail: "La accion queda a un toque."
+    },
+    {
+      title: "Canales diversos",
+      description:
+        "Conecta WhatsApp, redes, agenda, ubicacion, campanas o landing desde la misma tarjeta.",
+      detail: "Un solo punto para varias rutas de venta."
+    },
+    {
+      title: "Catalogo activo",
+      description:
+        "Muestra productos o servicios sin depender de folletos impresos que se desactualizan.",
+      detail: "Ideal para rotacion, temporadas y ofertas."
+    },
+    {
+      title: "Datos periodicos",
+      description:
+        "En el plan avanzado puedes revisar movimiento digital para entender interes y oportunidades.",
+      detail: "Mejor informacion para vender mejor."
     }
   ],
   directory: [

@@ -11,35 +11,21 @@ import {
   MousePointerClick,
   QrCode,
   SearchCheck,
-  Share2,
-  UsersRound
+  Share2
 } from "lucide-react";
 import { PhoneShowcase } from "@/components/PhoneShowcase";
 import { ProductCardShowcase } from "@/components/ProductCardShowcase";
 import { site } from "@/data/site";
 
-const productIcons = [Contact, UsersRound, LayoutPanelTop];
-const directoryBenefits = [
-  {
-    icon: SearchCheck,
-    title: "Facil",
-    text: "El cliente entiende de inmediato donde tocar y con quien hablar."
-  },
-  {
-    icon: MousePointerClick,
-    title: "Rapido",
-    text: "Reduce pasos: no busca numeros, no guarda contactos, no espera respuesta interna."
-  },
-  {
-    icon: Share2,
-    title: "Agil",
-    text: "La informacion cambia sin frenar ventas ni recoger tarjetas ya entregadas."
-  },
-  {
-    icon: BadgeCheck,
-    title: "Multicanal",
-    text: "WhatsApp, catalogo, directorio, redes, agenda o campanas desde una misma tarjeta."
-  }
+const advantageIcons = [
+  IdCard,
+  BadgeCheck,
+  QrCode,
+  Contact,
+  MousePointerClick,
+  Share2,
+  LayoutPanelTop,
+  SearchCheck
 ];
 
 function BrandMark() {
@@ -67,7 +53,7 @@ export default function Home() {
         <header className="topbar" data-aos="fade-down" data-aos-delay="120">
           <BrandMark />
           <nav className="topnav" aria-label="Secciones principales">
-            <a href="#productos">Productos</a>
+            <a href="#ventajas">Ventajas</a>
             <a href="#planes">Planes</a>
             <a href={site.contact.whatsappUrl}>Contacto</a>
           </nav>
@@ -89,7 +75,7 @@ export default function Home() {
                 {site.hero.primaryAction}
                 <ArrowRight size={18} aria-hidden="true" />
               </a>
-              <a className="button button-secondary" href="#productos">
+              <a className="button button-secondary" href="#ventajas">
                 {site.hero.secondaryAction}
                 <Globe2 size={18} aria-hidden="true" />
               </a>
@@ -155,66 +141,33 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="products-section" id="productos" aria-labelledby="productos-title">
+      <section className="advantages-section" id="ventajas" aria-labelledby="ventajas-title">
         <div className="section-heading" data-aos="fade-up" data-aos-duration="1000">
-          <p className="eyebrow">Productos</p>
-          <h2 id="productos-title">Tres productos vendibles.</h2>
+          <p className="eyebrow">Ventajas</p>
+          <h2 id="ventajas-title">Mas valor en cada tarjeta.</h2>
         </div>
 
-        <div className="product-grid">
-          {site.products.map((product, index) => {
-            const Icon = productIcons[index];
+        <div className="advantages-grid">
+          {site.advantages.map((advantage, index) => {
+            const Icon = advantageIcons[index];
 
             return (
               <article
-                className="product-card"
-                key={product.title}
+                className="advantage-card"
+                key={advantage.title}
                 data-aos="fade-up"
-                data-aos-delay={`${index * 140}`}
+                data-aos-delay={`${index * 70}`}
                 data-aos-duration="1000"
               >
                 <div className="icon-cell">
                   <Icon size={24} aria-hidden="true" />
                 </div>
-                <h3>{product.title}</h3>
-                <p>{product.description}</p>
-                <strong>{product.detail}</strong>
+                <h3>{advantage.title}</h3>
+                <p>{advantage.description}</p>
+                <strong>{advantage.detail}</strong>
               </article>
             );
           })}
-        </div>
-      </section>
-
-      <section className="directory-section" aria-label="Ventajas comerciales">
-        <div className="directory-copy" data-aos="fade-right" data-aos-duration="1100">
-          <p className="eyebrow">Ventajas comerciales</p>
-          <h2>Menos friccion para contactar.</h2>
-          <p>
-            El valor no esta solo en entregar una tarjeta bonita. Esta en que cada persona
-            llegue al canal correcto sin preguntar, esperar o perderse entre enlaces.
-          </p>
-
-          <div className="directory-benefits">
-            {directoryBenefits.map((benefit, index) => {
-              const Icon = benefit.icon;
-
-              return (
-                <article
-                  className="directory-benefit"
-                  key={benefit.title}
-                  data-aos="fade-up-right"
-                  data-aos-delay={`${index * 130}`}
-                  data-aos-duration="900"
-                >
-                  <Icon size={20} aria-hidden="true" />
-                  <div>
-                    <h3>{benefit.title}</h3>
-                    <p>{benefit.text}</p>
-                  </div>
-                </article>
-              );
-            })}
-          </div>
         </div>
       </section>
 
