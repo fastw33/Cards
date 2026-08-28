@@ -141,7 +141,7 @@ export default function Home() {
             </span>
             <span>
               <QrCode size={17} aria-hidden="true" />
-              Destino editable
+              Destino actualizable
             </span>
             <span>
               <MessageCircle size={17} aria-hidden="true" />

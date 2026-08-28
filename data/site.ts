@@ -58,7 +58,7 @@ export const site = {
       name: "Individual",
       price: "Una marca",
       description: "Para contacto personal, marca comercial o punto de venta.",
-      features: ["Datos editables", "WhatsApp y redes", "Landing simple"]
+      features: ["Datos actualizables", "WhatsApp y redes", "Landing simple"]
     },
     {
       name: "Equipo",
