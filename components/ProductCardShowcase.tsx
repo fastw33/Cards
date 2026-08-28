@@ -23,7 +23,7 @@ export function ProductCardShowcase() {
   return (
     <div
       className="product-card-scene"
-      aria-label="Vista 3D de tarjeta fisica QR"
+      aria-label="Vista 3D de tarjeta fisica inteligente"
       data-aos="genika-card-reveal"
       data-aos-delay="260"
       data-aos-duration="1350"

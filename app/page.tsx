@@ -25,18 +25,23 @@ const processIcons = [BadgeCheck, Building2, Sparkles];
 const directoryBenefits = [
   {
     icon: SearchCheck,
-    title: "Contacto facil",
-    text: "El cliente escanea y encuentra WhatsApp, redes, catalogo, ubicacion o formulario."
+    title: "Facil",
+    text: "El cliente entiende de inmediato donde tocar y con quien hablar."
   },
   {
     icon: MousePointerClick,
-    title: "Rapido y agil",
-    text: "Cambias numeros, enlaces, asesores o productos sin volver a imprimir tarjetas."
+    title: "Rapido",
+    text: "Reduce pasos: no busca numeros, no guarda contactos, no espera respuesta interna."
   },
   {
     icon: Share2,
-    title: "Canales diversos",
-    text: "Una tarjeta puede abrir directorio, landing, catalogo, redes, agenda o campanas."
+    title: "Agil",
+    text: "La informacion cambia sin frenar ventas ni recoger tarjetas ya entregadas."
+  },
+  {
+    icon: BadgeCheck,
+    title: "Multicanal",
+    text: "WhatsApp, catalogo, directorio, redes, agenda o campanas desde una misma tarjeta."
   }
 ];
 
@@ -125,11 +130,11 @@ export default function Home() {
       <section className="card-showcase-section" aria-labelledby="tarjeta-title">
         <div className="card-showcase-copy" data-aos="fade-right" data-aos-duration="1000">
           <p className="eyebrow">Producto fisico</p>
-          <h2 id="tarjeta-title">Imprime una vez. Actualiza siempre.</h2>
+          <h2 id="tarjeta-title">Una tarjeta. Muchos destinos.</h2>
           <p>
-            Una tarjeta inteligente para entregar en reuniones, puntos de venta o eventos. No
-            pierde vigencia: si cambia el numero, el equipo o el catalogo, se actualiza la URL.
-            Menos reimpresiones, menor desperdicio y mejor costo por contacto.
+            Una pieza fisica para reuniones, mostradores, domicilios o eventos. El cliente
+            escanea y llega al canal correcto; tu negocio evita reimpresiones, desperdicio y
+            costos por informacion desactualizada.
           </p>
 
           <div className="card-feature-list" aria-label="Incluye tarjeta inteligente">
@@ -139,7 +144,7 @@ export default function Home() {
             </span>
             <span>
               <QrCode size={17} aria-hidden="true" />
-              URL controlada
+              Destino editable
             </span>
             <span>
               <MessageCircle size={17} aria-hidden="true" />
@@ -156,7 +161,7 @@ export default function Home() {
       <section className="products-section" id="productos" aria-labelledby="productos-title">
         <div className="section-heading" data-aos="fade-up" data-aos-duration="1000">
           <p className="eyebrow">Productos</p>
-          <h2 id="productos-title">Tres formas de vender con tarjetas.</h2>
+          <h2 id="productos-title">Tres productos para tres necesidades.</h2>
         </div>
 
         <div className="product-grid">
@@ -186,10 +191,10 @@ export default function Home() {
       <section className="directory-section" aria-label="Ventajas comerciales">
         <div className="directory-copy" data-aos="fade-right" data-aos-duration="1100">
           <p className="eyebrow">Ventajas comerciales</p>
-          <h2>Un escaneo. Varios caminos de venta.</h2>
+          <h2>Menos friccion para contactar.</h2>
           <p>
-            La tarjeta deja de ser un papel estatico y se convierte en un punto de entrada:
-            contacto facil, respuesta rapida, catalogo visible y canales digitales conectados.
+            El valor no esta solo en entregar una tarjeta bonita. Esta en que cada persona
+            llegue al canal correcto sin preguntar, esperar o perderse entre enlaces.
           </p>
 
           <div className="directory-benefits">
@@ -219,7 +224,7 @@ export default function Home() {
       <section className="process-section" aria-labelledby="process-title">
         <div className="section-heading process-heading" data-aos="fade-up" data-aos-duration="1000">
           <p className="eyebrow">Como funciona</p>
-          <h2 id="process-title">Tarjetas listas para vender mas.</h2>
+          <h2 id="process-title">De idea a tarjetas listas.</h2>
         </div>
 
         {site.process.map((item, index) => {
@@ -244,8 +249,8 @@ export default function Home() {
 
       <section className="plans-section" id="planes" aria-labelledby="planes-title">
         <div className="section-heading" data-aos="fade-up" data-aos-duration="1000">
-          <p className="eyebrow">Paquetes</p>
-          <h2 id="planes-title">Elige el alcance de tus tarjetas.</h2>
+          <p className="eyebrow">Alcance</p>
+          <h2 id="planes-title">Define que necesita tu negocio.</h2>
         </div>
 
         <div className="plans-grid">
@@ -291,7 +296,7 @@ export default function Home() {
       <section className="cta-section" data-aos="zoom-in-up" data-aos-duration="1000">
         <div>
           <p className="eyebrow">Cotizacion</p>
-          <h2>Convierte tus tarjetas en canales activos.</h2>
+          <h2>Cotiza tus tarjetas Genika.</h2>
         </div>
         <a className="button button-primary" href={site.contact.whatsappUrl}>
           <MessageCircle size={18} aria-hidden="true" />

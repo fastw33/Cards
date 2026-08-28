@@ -1,7 +1,7 @@
 export const site = {
   brand: {
     name: "Genika",
-    subtitle: "Tarjetas inteligentes + directorio",
+    subtitle: "Tarjetas + directorio digital",
     initials: "G"
   },
   contact: {
@@ -9,42 +9,42 @@ export const site = {
     email: "hola@genika.co"
   },
   hero: {
-    eyebrow: "Tarjetas inteligentes",
-    title: "Tarjetas que no vencen.",
+    eyebrow: "Venta sin reimpresiones",
+    title: "Tarjetas para vender sin reimprimir.",
     description:
-      "Imprime una vez y actualiza siempre. Si cambia el numero, el catalogo o el equipo, Genika ajusta la URL sin perder las tarjetas entregadas.",
+      "Entregas una tarjeta fisica y Genika mantiene vivo el destino digital: contacto, catalogo, equipo, redes y datos comerciales desde un solo enlace.",
     primaryAction: "Cotizar tarjetas",
     secondaryAction: "Ver productos"
   },
   proof: [
-    "Contacto facil",
-    "Respuesta rapida",
-    "Gestion agil",
-    "Canales diversos"
+    "Cambio de numero",
+    "Catalogo activo",
+    "Directorio por equipo",
+    "Datos periodicos"
   ],
   metrics: [
-    { value: "URL", label: "Siempre actualizable porque controlamos el enlace del cliente." },
-    { value: "2000", label: "Unidades en formato eficiente para optimizar costo y alcance." },
-    { value: "0", label: "Tarjetas perdidas cuando cambias numero, enlaces o catalogo." }
+    { value: "2000", label: "Unidades en formato eficiente para campanas y equipos." },
+    { value: "2x", label: "Mas aprovechamiento frente a una tarjeta convencional." },
+    { value: "0", label: "Reimpresiones por cambios de numero, catalogo o asesores." }
   ],
   products: [
     {
-      title: "Tarjeta normal",
+      title: "Tarjeta individual",
       description:
-        "Una tarjeta fisica con enlace inteligente para WhatsApp, redes, ubicacion o landing.",
-      detail: "Ideal para emprendedores, tiendas y vendedores."
+        "Para una persona, vendedor o negocio que necesita contacto directo y presencia rapida.",
+      detail: "WhatsApp, redes, ubicacion y datos en una sola tarjeta."
     },
     {
       title: "Directorio empresa",
       description:
-        "Minimo 3 empleados, perfiles por asesor y opcion de catalogo en el mismo enlace.",
-      detail: "Una tarjeta para dirigir clientes al contacto correcto."
+        "Para equipos desde 3 empleados que necesitan ordenar asesores, areas y rutas de contacto.",
+      detail: "Cada visitante encuentra rapido a quien necesita."
     },
     {
-      title: "Directorio + datos",
+      title: "Directorio con datos",
       description:
-        "Incluye directorio, catalogo y entrega periodica de datos del enlace digital.",
-      detail: "Para equipos que quieren medir visitas, clics y oportunidades."
+        "Para empresas que quieren acompanamiento, catalogo y lectura periodica del movimiento digital.",
+      detail: "Visitas, clics y oportunidades para tomar mejores decisiones."
     }
   ],
   directory: [
@@ -56,38 +56,38 @@ export const site = {
   process: [
     {
       step: "01",
-      title: "Imprime una vez",
-      text: "La tarjeta sale con un enlace unico y una URL controlada por Genika."
+      title: "Disenamos tu tarjeta",
+      text: "Adaptamos marca, datos, llamada a la accion y destino principal."
     },
     {
       step: "02",
-      title: "Actualiza siempre",
-      text: "Cambios de numero, asesores, catalogo o enlaces se hacen sin reimprimir."
+      title: "Activamos el enlace",
+      text: "Conectamos contacto, directorio, catalogo, redes o landing segun el producto."
     },
     {
       step: "03",
-      title: "Vende por canales",
-      text: "La tarjeta conecta WhatsApp, directorio, landing, redes, catalogo y data comercial."
+      title: "Ajustamos cuando cambie",
+      text: "Numeros, asesores, campanas y catalogos pueden evolucionar despues de entregar tarjetas."
     }
   ],
   plans: [
     {
-      name: "Normal",
-      price: "Tarjeta inteligente",
-      description: "Tarjeta fisica para contacto directo y datos siempre actualizables.",
-      features: ["Enlace permanente", "WhatsApp y redes", "Cambios sin reimprimir"]
+      name: "Individual",
+      price: "Una marca",
+      description: "Para contacto personal, marca comercial o punto de venta.",
+      features: ["Datos editables", "WhatsApp y redes", "Landing simple"]
     },
     {
-      name: "Empresa",
-      price: "Min. 3 empleados",
-      description: "Directorio para equipos con perfiles, areas y catalogo visible.",
-      features: ["Directorio por asesor", "Catalogo", "Contacto por area"]
+      name: "Equipo",
+      price: "Desde 3 empleados",
+      description: "Para empresas que necesitan repartir contactos sin confundir al cliente.",
+      features: ["Perfiles por asesor", "Areas o cargos", "Catalogo opcional"]
     },
     {
       name: "Datos",
-      price: "Directorio + data",
-      description: "Lo anterior mas entrega periodica de datos del enlace digital.",
-      features: ["Visitas y clics", "Reportes periodicos", "Mejor lectura comercial"]
+      price: "Lectura comercial",
+      description: "Para equipos que quieren revisar actividad y mejorar sus canales.",
+      features: ["Visitas y clics", "Reporte periodico", "Seguimiento de interes"]
     }
   ],
   faq: [
@@ -109,7 +109,7 @@ export const site = {
     {
       question: "Por que reduce desperdicio?",
       answer:
-        "Porque no necesitas reimprimir cada vez que cambia un numero, un asesor o una promocion."
+        "Porque cada cambio se resuelve en el destino digital, sin desechar material ya entregado."
     }
   ]
 };
