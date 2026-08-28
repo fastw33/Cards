@@ -144,7 +144,7 @@ export default function Home() {
       <section className="advantages-section" id="ventajas" aria-labelledby="ventajas-title">
         <div className="section-heading" data-aos="fade-up" data-aos-duration="1000">
           <p className="eyebrow">Ventajas</p>
-          <h2 id="ventajas-title">Mas valor en cada tarjeta.</h2>
+          <h2 id="ventajas-title">Ahorra, actualiza y vende.</h2>
         </div>
 
         <div className="advantages-grid">
