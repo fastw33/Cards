@@ -269,8 +269,8 @@ export const siteByMarket: Record<Market, SiteContent> = {
         name: "Lectura de datos",
         price: "Lectura comercial",
         description: "Para cotizar segun necesidad despues de revisar alcance en una reunion.",
-        action: "Agendar lectura",
-        whatsappMessage: "Hola Genika, quiero agendar una lectura comercial para el plan de datos.",
+        action: "Agendar cita",
+        whatsappMessage: "Hola Genika, quiero agendar una cita comercial para el plan de datos.",
         features: ["Reunion de alcance", "Entrega periodica de data", "Seguimiento de interes"]
       }
     ],
@@ -467,8 +467,8 @@ export const siteByMarket: Record<Market, SiteContent> = {
         name: "Data review",
         price: "Commercial read",
         description: "Quoted after a meeting to define scope and business needs.",
-        action: "Book review",
-        whatsappMessage: "Hello Genika, I want to book a commercial data review.",
+        action: "Book a meeting",
+        whatsappMessage: "Hello Genika, I want to book a commercial meeting for the data plan.",
         features: ["Scope meeting", "Periodic data delivery", "Interest tracking"]
       }
     ],
